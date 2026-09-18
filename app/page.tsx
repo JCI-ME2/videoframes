@@ -1,6 +1,6 @@
 const videos = [
   { url: "https://www.youtube.com/watch?v=8fLuO2xw-es", title: "Exacq Software" },
-  { url: "https://www.youtube.com/watch?v=pPoh_YILVuw", title: "Exacq Hardware" },
+  { url: "https://www.youtube.com/watch?v=FGOKMAjFI-M", title: "Exacq Hardware" },
   { url: "https://www.youtube.com/watch?v=QVBh5bG4-AI", title: "Illustra Cameras" },
   { url: "https://www.youtube.com/watch?v=S1xZoTt94Ro", title: "Illustra Standard" },
   { url: "https://www.youtube.com/watch?v=88JvhJVklX4", title: "Holis NVR" },
