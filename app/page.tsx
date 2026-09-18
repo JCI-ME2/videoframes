@@ -28,7 +28,7 @@ export default function Home() {
         </div>
       </header>
 
-      <section className="mx-auto max-w-[1408px] px-6 py-12 lg:px-10">
+      <section className="mx-auto max-w-[1549px] px-6 py-12 lg:px-10">
         <div className="max-w-2xl">
           <h2 className="text-4xl font-semibold tracking-tight sm:text-5xl">Explore the collection</h2>
           <p className="mt-4 text-base leading-7 text-[#5d6a7d]">
