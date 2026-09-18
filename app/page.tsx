@@ -36,25 +36,31 @@ export default function Home() {
         </div>
 
         <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-          {videos.map((video, index) => (
-            <article key={video.url} className="overflow-hidden rounded-2xl border border-[#dfe4eb] bg-white shadow-sm transition-shadow hover:shadow-md">
-              <div className="aspect-video bg-[#101827]">
-                <iframe
-                  className="h-full w-full"
-                  src={video.url.replace("watch?v=", "embed/")}
-                  title={video.title}
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowFullScreen
-                />
-              </div>
-              <div className="flex items-center gap-3 px-5 py-4">
-                <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#e8f2f9] text-xs font-semibold text-[#1769aa]">
-                  {String(index + 1).padStart(2, "0")}
-                </span>
-                <h3 className="text-sm font-semibold">{video.title}</h3>
-              </div>
-            </article>
-          ))}
+          {videos.map((video, index) => {
+            const frameId = video.title.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "")
+
+            return (
+              <article id={frameId} key={video.url} className="scroll-mt-6 overflow-hidden rounded-2xl border border-[#dfe4eb] bg-white shadow-sm transition-shadow hover:shadow-md">
+                <div className="aspect-video bg-[#101827]">
+                  <iframe
+                    id={`${frameId}-video`}
+                    name={frameId}
+                    className="h-full w-full"
+                    src={video.url.replace("watch?v=", "embed/")}
+                    title={video.title}
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowFullScreen
+                  />
+                </div>
+                <div className="flex items-center gap-3 px-5 py-4">
+                  <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#e8f2f9] text-xs font-semibold text-[#1769aa]">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+                  <h3 className="text-sm font-semibold">{video.title}</h3>
+                </div>
+              </article>
+            )
+          })}
         </div>
       </section>
     </main>
