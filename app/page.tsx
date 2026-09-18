@@ -1,15 +1,15 @@
 const videos = [
-  { id: "8fLuO2xw-es", title: "Exacq Software" },
-  { id: "pPoh_YILVuw", title: "Exacq Hardware" },
-  { id: "QVBh5bG4-AI", title: "Illustra Cameras" },
-  { id: "S1xZoTt94Ro", title: "Illustra Standard" },
-  { id: "88JvhJVklX4", title: "Holis NVR" },
-  { id: "Ut4sEDLgnlc", title: "Access Control" },
-  { id: "36Oc-v3ZEDU", title: "Access Control Software" },
-  { id: "yIlEQkDewE0", title: "Maglocks" },
-  { id: "BOyCGcTGaVQ", title: "Controllers" },
-  { id: "8CFmAHK-hRk", title: "Card Readers" },
-  { id: "0qDc7zO7lLo", title: "Biometric Access" },
+  { url: "https://www.youtube.com/watch?v=8fLuO2xw-es", title: "Exacq Software" },
+  { url: "https://www.youtube.com/watch?v=pPoh_YILVuw", title: "Exacq Hardware" },
+  { url: "https://www.youtube.com/watch?v=QVBh5bG4-AI", title: "Illustra Cameras" },
+  { url: "https://www.youtube.com/watch?v=S1xZoTt94Ro", title: "Illustra Standard" },
+  { url: "https://www.youtube.com/watch?v=88JvhJVklX4", title: "Holis NVR" },
+  { url: "https://www.youtube.com/watch?v=Ut4sEDLgnlc", title: "Access Control" },
+  { url: "https://www.youtube.com/watch?v=36Oc-v3ZEDU", title: "Access Control Software" },
+  { url: "https://www.youtube.com/watch?v=yIlEQkDewE0", title: "Maglocks" },
+  { url: "https://www.youtube.com/watch?v=BOyCGcTGaVQ", title: "Controllers" },
+  { url: "https://www.youtube.com/watch?v=8CFmAHK-hRk", title: "Card Readers" },
+  { url: "https://www.youtube.com/watch?v=0qDc7zO7lLo", title: "Biometric Access" },
 ]
 
 export default function Home() {
@@ -37,11 +37,11 @@ export default function Home() {
 
         <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
           {videos.map((video, index) => (
-            <article key={video.id} className="overflow-hidden rounded-2xl border border-[#dfe4eb] bg-white shadow-sm transition-shadow hover:shadow-md">
+            <article key={video.url} className="overflow-hidden rounded-2xl border border-[#dfe4eb] bg-white shadow-sm transition-shadow hover:shadow-md">
               <div className="aspect-video bg-[#101827]">
                 <iframe
                   className="h-full w-full"
-                  src={`https://www.youtube.com/embed/${video.id}`}
+                  src={video.url.replace("watch?v=", "embed/")}
                   title={video.title}
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   allowFullScreen
