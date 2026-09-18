@@ -3,8 +3,8 @@ import type { Metadata, Viewport } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'v0 App',
-  description: 'Created with v0',
+  title: 'Tyco Presales Video Library',
+  description: 'Browse eleven Tyco presales product and solution videos.',
   generator: 'v0.app',
   icons: {
     icon: [
