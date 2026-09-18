@@ -10,7 +10,7 @@ const videos = [
   { url: "https://www.youtube.com/watch?v=BOyCGcTGaVQ", title: "Controllers" },
   { url: "https://www.youtube.com/watch?v=8CFmAHK-hRk", title: "Card Readers" },
   { url: "https://www.youtube.com/watch?v=0qDc7zO7lLo", title: "Biometric Access" },
-  { url: "https://www.youtube.com/watch?v=uN9ir5An00g", title: "YouTube Video 12" },
+  { url: "https://www.youtube.com/watch?v=uN9ir5An00g", title: "Exacq main features" },
 ]
 
 export default function Home() {
